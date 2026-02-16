@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwiftCart - Best Collection For You</title>
+    <title>Products - SwiftCart</title>
 
     <!-- Tailwind CSS & DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -39,11 +39,11 @@
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </div>
-            <a href="#home" class="text-2xl font-bold text-blue-600 flex items-center gap-2">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 flex items-center gap-2">
                 <span>SwiftCart</span>
             </a>
         </div>
@@ -51,9 +51,9 @@
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 gap-4 text-gray-700 font-medium">
                 <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-                <li><a href="products.html" class="hover:text-blue-600">Products</a></li>
-                <li><a href="#about" class="hover:text-blue-600">About</a></li>
-                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+                <li><a href="products.html" class="text-blue-600">Products</a></li>
+                <li><a href="index.html#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="index.html#contact" class="hover:text-blue-600">Contact</a></li>
             </ul>
         </div>
 
@@ -65,66 +65,20 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content-wrapper">
-            <div class="hero-text">
-                <h1 class="hero-title">Best Collection For You</h1>
-                <p class="hero-subtitle">Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.</p>
-                <a href="products.html" class="shop-now-btn">
-                    Shop Now
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="about" class="py-16 bg-gray-50">
+    <!-- Our Products Section -->
+    <section class="py-16 bg-gray-50 min-h-screen">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Why Choose Us</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition-all p-6">
-                    <div class="card-body items-center text-center p-0">
-                        <i class="fas fa-shipping-fast text-5xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Fast Delivery</h3>
-                        <p class="text-gray-600">Quick and reliable shipping to your doorstep</p>
-                    </div>
-                </div>
+            <h2 class="text-4xl font-bold text-center mb-8 text-gray-800">Our Products</h2>
 
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition-all p-6">
-                    <div class="card-body items-center text-center p-0">
-                        <i class="fas fa-headset text-5xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
-                        <p class="text-gray-600">Round-the-clock customer service assistance</p>
-                    </div>
-                </div>
-
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition-all p-6">
-                    <div class="card-body items-center text-center p-0">
-                        <i class="fas fa-lock text-5xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Secure Payment</h3>
-                        <p class="text-gray-600">Safe and encrypted payment transactions</p>
-                    </div>
-                </div>
-
-                <div class="card bg-white shadow-xl hover:shadow-2xl transition-all p-6">
-                    <div class="card-body items-center text-center p-0">
-                        <i class="fas fa-undo text-5xl text-blue-600 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Easy Returns</h3>
-                        <p class="text-gray-600">Hassle-free 30-day return policy</p>
-                    </div>
-                </div>
+            <!-- Category Filters -->
+            <div id="category-filters" class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="category-btn active" data-category="all">All</button>
+                <!-- Categories will be loaded dynamically -->
             </div>
-        </div>
-    </section>
 
-    <!-- Trending Now Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-gray-800">Trending Now</h2>
-            <div id="trending-products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Trending products will be loaded here -->
+            <!-- Products Grid -->
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Products will be loaded here -->
                 <div class="flex justify-center col-span-full">
                     <span class="loading loading-spinner loading-lg text-blue-600"></span>
                 </div>
@@ -148,10 +102,10 @@
                 <div>
                     <h4 class="text-lg font-semibold text-white mb-4">QUICK LINKS</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-blue-400 transition-colors">Home</a></li>
-                        <li><a href="#products" class="hover:text-blue-400 transition-colors">Products</a></li>
-                        <li><a href="#about" class="hover:text-blue-400 transition-colors">About</a></li>
-                        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                        <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home</a></li>
+                        <li><a href="products.html" class="hover:text-blue-400 transition-colors">Products</a></li>
+                        <li><a href="index.html#about" class="hover:text-blue-400 transition-colors">About</a></li>
+                        <li><a href="index.html#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
 

@@ -123,25 +123,31 @@ html {
     background: white;
 }
 
-/* Category Button Active State */
+/* Category Button Styles */
 .category-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid #e5e7eb;
+    background-color: white;
+    color: #6b7280;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
     transition: all 0.3s ease;
-    border: 2px solid #5B4FEF;
 }
 
 .category-btn.active {
     background-color: #5B4FEF;
     color: white;
-    transform: scale(1.05);
+    border-color: #5B4FEF;
 }
 
-.category-btn:not(.active) {
-    background-color: transparent;
+.category-btn:hover {
+    border-color: #5B4FEF;
     color: #5B4FEF;
 }
 
-.category-btn:not(.active):hover {
-    background-color: #5B4FEF;
+.category-btn.active:hover {
     color: white;
 }
 
@@ -268,7 +274,7 @@ html {
 }
 
 /* Truncate text */
-.truncate-2-lines {
+.truncate-2-lines, .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
