@@ -3,8 +3,8 @@
 A modern and responsive e-commerce website built with vanilla HTML, CSS (Tailwind + DaisyUI), and JavaScript.
 
 ## Live Demo
-- **Live Link:** [YOUR_DEPLOYED_URL_HERE]
-- **GitHub Repository:** [YOUR_REPO_URL_HERE]
+- **Live Link:** [https://restart-assignment-first.vercel.app/](https://restart-assignment-first.vercel.app/)
+- **GitHub Repository:** [https://github.com/kohinurfatema/restart-assignment-first](https://github.com/kohinurfatema/restart-assignment-first)
 
 ## Features
 
